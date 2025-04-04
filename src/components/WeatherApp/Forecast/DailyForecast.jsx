@@ -17,8 +17,8 @@ export const DailyForecast = ({ forecastData }) => {
         <span className="text-sm">7-DAY FORECAST</span>
       </div>
       
-      <div className='grid grid-cols-7 gap-2 mt-2'>
-        {forecastData?.list?.filter((item, index) => index % 5 === 0).slice(0, 7).map((day, idx) => (
+      <div className='grid grid-cols-5 gap-2 mt-2'>
+        {forecastData?.list?.filter((item, index) => index % 5 === 0).slice(0, 5).map((day, idx) => (
           <div key={idx} className="bg-slate-700/40 rounded-lg p-3 text-center backdrop-blur-xs">
             <div className="text-sm">{formatDate(day.dt)}</div>
             <div className="w-8 h-8 mx-auto">{getWeatherIcon(day.weather[0].main)}</div>

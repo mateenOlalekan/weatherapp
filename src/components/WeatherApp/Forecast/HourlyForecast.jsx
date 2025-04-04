@@ -14,8 +14,8 @@ export const HourlyForecast = ({ forecastData }) => {
         <span className="text-sm">HOURLY FORECAST</span>
       </div>
 
-      <div className="grid grid-cols-7 gap-2 mt-2">
-        {forecastData?.list?.slice(0, 7).map((hour, idx) => (
+      <div className="grid grid-cols-5 gap-2 mt-2">
+        {forecastData?.list?.slice(0, 5).map((hour, idx) => (
           <div key={idx} className="bg-slate-700/40 rounded-lg p-3 text-center backdrop-blur-xs">
             <div className="text-sm">{new Date(hour.dt * 1000).getHours()}:00</div>
             <div>{getWeatherIcon(hour.weather[0].main)}</div>
